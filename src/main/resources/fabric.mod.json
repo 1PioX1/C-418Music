@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "c-418music-mod",
+	"version": "${version}",
+	"name": "C-418Music-Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/c-418music-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"c418.modid.C418MusicMod"
+		],
+		"client": [
+			"c418.modid.C418MusicModClient"
+		]
+	},
+	"mixins": [
+		"c-418music-mod.mixins.json",
+		{
+			"config": "c-418music-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
